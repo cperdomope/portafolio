@@ -6,6 +6,7 @@ import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import ScrollToTop from './components/ui/ScrollToTop'
+import MusicToggle from './components/ui/MusicToggle'
 
 /**
  * Componente raíz: ensambla la navegación y todas las secciones del portafolio.
@@ -23,6 +24,7 @@ function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <MusicToggle />
     </>
   )
 }
