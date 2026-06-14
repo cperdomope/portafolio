@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador de Software",
+    "tagline": "Construyo aplicaciones web y de escritorio que resuelven problemas reales, con código limpio y experiencias bien pensadas.",
+    "cta_cv": "Descargar CV",
+    "cta_projects": "Ver proyectos"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "body": "Soy estudiante de Tecnólogo en Análisis y Desarrollo de Software en el SENA, enfocado en transformar ideas en soluciones funcionales. Me especializo en el desarrollo full-stack y de escritorio, con un enfoque práctico en resolver problemas a través del código."
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de mi trabajo reciente",
+    "view_repo": "Repositorio",
+    "view_demo": "Demo en vivo"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos.",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Te responderé pronto.",
+    "error": "Hubo un error. Inténtalo de nuevo o escríbeme por correo."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

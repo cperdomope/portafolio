@@ -1,0 +1,13 @@
+# ── Configuración de despliegue en Netlify ─────────────────────────────
+# Netlify lee este archivo automáticamente al desplegar.
+
+[build]
+  command = "npm run build"   # comando que genera el sitio
+  publish = "dist"            # carpeta que Vite produce y Netlify sirve
+
+# Redirección para Single Page Application:
+# cualquier ruta devuelve index.html (evita errores 404 al recargar).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

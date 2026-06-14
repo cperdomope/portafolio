@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Developer",
+    "tagline": "I build web and desktop applications that solve real problems, with clean code and thoughtful experiences.",
+    "cta_cv": "Download CV",
+    "cta_projects": "View projects"
+  },
+  "about": {
+    "title": "About me",
+    "body": "I'm a Software Analysis and Development student at SENA, focused on turning ideas into functional solutions. I specialize in full-stack and desktop development, with a hands-on approach to solving problems through code."
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of my recent work",
+    "view_repo": "Repository",
+    "view_demo": "Live demo"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Let's talk.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Try again or email me directly."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
