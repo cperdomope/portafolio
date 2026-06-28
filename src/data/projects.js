@@ -24,8 +24,8 @@ export const projects = [
     title: 'Sistema de Gestión de Parqueaderos',
     image: '/projects/parqueadero.png', // TODO: reemplazar por mockup real
     description: {
-      es: 'Aplicación de escritorio para optimizar la rotación vehicular: registro de entradas/salidas, cálculo de tarifas y control de cupos en tiempo real.',
-      en: 'Desktop application to optimize vehicle rotation: entry/exit logging, fee calculation and real-time slot control.',
+      es: 'Aplicación de escritorio para administrar la rotación y los cupos vehiculares, asignando la disponibilidad según el estado del vehículo (pico y placa, híbrido, eléctrico) y el cargo del funcionario.',
+      en: 'Desktop application to manage vehicle rotation and parking spots, assigning availability based on vehicle category (pico y placa restriction, hybrid, electric) and the role of the staff member.',
     },
     tags: ['Python', 'PyQt5', 'MySQL'],
     repo: 'https://github.com/cperdomope', // TODO: enlace al repo específico
