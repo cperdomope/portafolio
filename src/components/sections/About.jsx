@@ -12,7 +12,7 @@ function About() {
   const lang = i18n.language === 'en' ? 'en' : 'es'
 
   const highlights = [
-    { icon: Terminal, key: 'edu', es: 'Formación SENA', en: 'SENA Education' },
+    { icon: Terminal, key: 'edu', es: 'Desarrollo de Software', en: 'Software Development' },
     { icon: Code2, key: 'dev', es: 'Full-stack & Escritorio', en: 'Full-stack & Desktop' },
     { icon: Lightbulb, key: 'solve', es: 'Resolución de problemas', en: 'Problem solving' },
   ]
