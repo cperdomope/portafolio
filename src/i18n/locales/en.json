@@ -34,7 +34,9 @@
     "send": "Send message",
     "sending": "Sending...",
     "success": "Message sent! I'll get back to you soon.",
-    "error": "Something went wrong. Try again or email me directly."
+    "error": "Something went wrong. Try again or email me directly.",
+    "error_validation": "Please check that your name, email and message are valid.",
+    "error_rate": "Please wait a few seconds before sending another message."
   },
   "footer": {
     "rights": "All rights reserved."

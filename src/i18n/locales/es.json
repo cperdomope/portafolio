@@ -34,7 +34,9 @@
     "send": "Enviar mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado! Te responderé pronto.",
-    "error": "Hubo un error. Inténtalo de nuevo o escríbeme por correo."
+    "error": "Hubo un error. Inténtalo de nuevo o escríbeme por correo.",
+    "error_validation": "Revisa que el nombre, el correo y el mensaje sean válidos.",
+    "error_rate": "Espera unos segundos antes de enviar otro mensaje."
   },
   "footer": {
     "rights": "Todos los derechos reservados."

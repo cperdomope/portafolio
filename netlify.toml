@@ -11,3 +11,20 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# ── Cabeceras de seguridad (se aplican a todo el sitio) ────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Fuerza HTTPS durante 2 años (incluye subdominios)
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Evita que el sitio se incruste en iframes (anti-clickjacking)
+    X-Frame-Options = "DENY"
+    # Impide que el navegador "adivine" tipos MIME (anti-sniffing)
+    X-Content-Type-Options = "nosniff"
+    # No filtrar la URL completa al navegar a sitios externos
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Desactiva APIs sensibles que el sitio no usa
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    # Content Security Policy: define de dónde se puede cargar cada recurso
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://api.emailjs.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"

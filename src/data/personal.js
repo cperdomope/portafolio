@@ -9,6 +9,5 @@ export const personal = {
 
   // Enlaces sociales
   github: 'https://github.com/cperdomope',
-  // linkedin: 'https://www.linkedin.com/in/TU-USUARIO', // ⏳ PENDIENTE: descomenta y completa cuando tengas la URL
-  linkedin: null,
+  linkedin: 'https://www.linkedin.com/in/carlos-perdomo-0911752a4',
 }

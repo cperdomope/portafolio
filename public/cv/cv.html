@@ -13,12 +13,10 @@
     <style>
       /* ── Variables ── */
       :root {
-        --accent: #2563eb;
-        --accent-light: #3b82f6;
-        --ink: #1e293b; /* texto principal */
-        --muted: #64748b; /* texto secundario */
-        --line: #e2e8f0; /* líneas divisorias */
-        --sidebar-bg: #f8fafc;
+        --accent: #1e3a5f; /* azul marino (títulos y acentos) */
+        --ink: #1f2937; /* texto principal */
+        --muted: #6b7280; /* texto secundario */
+        --line: #d8dee9; /* líneas divisorias */
       }
 
       * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,422 +30,325 @@
         print-color-adjust: exact;
       }
 
-      /* Hoja A4 */
+      /* Hoja (una sola columna) */
       .page {
-        width: 210mm;
-        min-height: 297mm;
+        max-width: 210mm;
         margin: 16px auto;
+        padding: 16mm 18mm;
         background: #fff;
-        display: grid;
-        grid-template-columns: 68mm 1fr;
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
       }
 
-      /* ── Barra lateral ── */
-      .sidebar {
-        background: var(--sidebar-bg);
-        border-right: 1px solid var(--line);
-        padding: 16px 16px;
-      }
-
-      /* Foto de perfil */
-      .photo-wrap {
+      /* ── Encabezado ── */
+      .header {
         display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 14px;
+        margin-bottom: 16px;
       }
+      .header-info { flex: 1; }
+      .name {
+        font-size: 27px;
+        font-weight: 800;
+        color: var(--accent);
+        letter-spacing: -0.3px;
+      }
+      .role {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+        margin-top: 2px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px 12px;
+        font-size: 10.5px;
+        color: var(--muted);
+        margin-top: 9px;
+      }
+      .contact a { color: var(--muted); text-decoration: none; }
+      .contact a:hover { color: var(--accent); }
+      .contact .sep { color: var(--line); }
       .photo {
-        width: 34mm;
-        height: 34mm;
+        width: 30mm;
+        height: 30mm;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid var(--accent);
+        border: 1px solid var(--line);
+        flex-shrink: 0;
       }
       .photo-fallback {
-        width: 34mm;
-        height: 34mm;
+        width: 30mm;
+        height: 30mm;
         border-radius: 50%;
-        border: 3px solid var(--accent);
-        background: #eef2ff;
+        border: 1px solid var(--line);
+        background: #f1f5f9;
         display: none;
         align-items: center;
         justify-content: center;
-        font-size: 34px;
+        font-size: 26px;
         font-weight: 800;
         color: var(--accent);
+        flex-shrink: 0;
       }
-      .name {
-        font-size: 22px;
-        font-weight: 800;
-        line-height: 1.15;
-        color: #0f172a;
-        text-align: center;
-      }
-      .role {
-        margin-top: 4px;
+
+      /* ── Secciones ── */
+      section { margin-bottom: 15px; }
+      h2 {
         font-size: 12.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--accent);
+        padding-bottom: 4px;
+        margin-bottom: 9px;
+        border-bottom: 1px solid var(--line);
+        break-after: avoid;
+      }
+
+      p { font-size: 11px; }
+      .profile { text-align: justify; color: var(--ink); }
+
+      /* Habilidades */
+      .skill-row { font-size: 11px; margin-bottom: 5px; }
+      .skill-row b { color: var(--accent); }
+
+      /* Proyectos */
+      .project { margin-bottom: 10px; break-inside: avoid; }
+      .project-head {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .project-title { font-size: 12px; font-weight: 700; color: var(--ink); }
+      .project-type {
+        font-size: 9.5px;
         font-weight: 600;
         color: var(--accent);
-        letter-spacing: 0.3px;
-        text-align: center;
-      }
-
-      .sidebar-section { margin-top: 10px; }
-
-      .sidebar h2 {
-        font-size: 11px;
-        font-weight: 700;
+        background: #eef2f7;
+        padding: 1px 7px;
+        border-radius: 10px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #0f172a;
-        padding-bottom: 4px;
-        margin-bottom: 6px;
-        border-bottom: 2px solid var(--accent);
+        letter-spacing: 0.4px;
       }
+      .project-desc { font-size: 11px; color: var(--ink); margin: 2px 0 2px; }
+      .project-tech { font-size: 10px; color: var(--muted); font-weight: 500; }
 
-      .contact-item {
+      /* Experiencia */
+      .job { margin-bottom: 11px; break-inside: avoid; }
+      .job-head {
         display: flex;
-        gap: 7px;
-        font-size: 11px;
-        color: var(--ink);
-        margin-bottom: 5px;
-        word-break: break-word;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
       }
-      .contact-item .ico { color: var(--accent); flex-shrink: 0; width: 14px; }
-      .contact-item a { color: var(--ink); text-decoration: none; }
-
-      .skill-group { margin-bottom: 4px; }
-      .skill-group .label {
-        font-size: 10px;
-        font-weight: 700;
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 4px;
-      }
-      .chips { display: flex; flex-wrap: wrap; gap: 5px; }
-      .chip {
-        font-size: 10.5px;
-        font-weight: 500;
-        background: #eef2ff;
-        color: var(--accent);
-        padding: 3px 8px;
-        border-radius: 20px;
-      }
-
-      .edu-item { margin-bottom: 7px; }
-      .edu-item .t { font-size: 11.5px; font-weight: 700; color: #0f172a; }
-      .edu-item .s { font-size: 10.5px; color: var(--muted); }
-      .edu-sub { font-size: 10.5px; color: var(--ink); margin-top: 3px; padding-left: 10px; position: relative; }
-      .edu-sub::before { content: '•'; color: var(--accent); position: absolute; left: 0; }
-
-      .lang-row { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 5px; }
-      .lang-row .lvl { color: var(--muted); }
-
-      /* ── Contenido principal ── */
-      .main { padding: 22px 24px; }
-
-      .main-section { margin-bottom: 18px; }
-
-      .main h2 {
-        font-size: 13px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: #0f172a;
-        margin-bottom: 11px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .main h2::after {
-        content: '';
-        flex: 1;
-        height: 2px;
-        background: var(--line);
-      }
-
-      .profile { font-size: 11.5px; color: var(--ink); text-align: justify; }
-
-      .job { margin-bottom: 13px; position: relative; padding-left: 14px; }
-      .job::before {
-        content: '';
-        position: absolute;
-        left: 0; top: 5px;
-        width: 7px; height: 7px;
-        border-radius: 50%;
-        background: var(--accent);
-      }
-      .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
-      .job-title { font-size: 12px; font-weight: 700; color: #0f172a; }
+      .job-role { font-size: 11.5px; font-weight: 700; color: var(--ink); }
+      .job-company { font-weight: 500; color: var(--accent); }
       .job-date { font-size: 10px; color: var(--muted); white-space: nowrap; }
-      .job-company { font-size: 11px; font-weight: 600; color: var(--accent); margin-bottom: 3px; }
-      .job-desc { font-size: 11px; color: var(--ink); }
+      .job ul { margin: 4px 0 0; padding-left: 16px; }
+      .job li { font-size: 10.8px; color: var(--ink); margin-bottom: 2px; }
 
-      .project { margin-bottom: 12px; }
-      .project-title { font-size: 12px; font-weight: 700; color: #0f172a; }
-      .project-desc { font-size: 11px; color: var(--ink); margin: 2px 0 4px; }
-      .project .chips .chip { background: #f1f5f9; color: var(--muted); }
+      /* Educación */
+      .edu-item { margin-bottom: 7px; break-inside: avoid; }
+      .edu-title { font-size: 11.3px; font-weight: 700; color: var(--ink); }
+      .edu-meta { font-size: 10.5px; color: var(--muted); }
 
-      /* Cursos / formación complementaria */
-      .course-note { font-size: 10.5px; color: var(--muted); margin-bottom: 9px; }
+      /* Formación complementaria (2 columnas) */
       .course-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 9px 16px;
+        gap: 6px 22px;
       }
-      .course {
-        padding-left: 11px;
-        position: relative;
-      }
+      .course { font-size: 10.5px; padding-left: 11px; position: relative; }
       .course::before {
         content: '';
         position: absolute;
-        left: 0; top: 4px;
-        width: 5px; height: 5px;
+        left: 0; top: 6px;
+        width: 4px; height: 4px;
         border-radius: 50%;
         background: var(--accent);
       }
-      .course .ct { font-size: 10.8px; font-weight: 700; color: #0f172a; line-height: 1.3; }
-      .course .cm { font-size: 9.8px; color: var(--muted); }
+      .course .ct { font-weight: 600; color: var(--ink); }
+      .course .cm { color: var(--muted); }
+
+      /* Idiomas */
+      .langs { font-size: 11px; color: var(--ink); }
+      .langs b { color: var(--accent); }
 
       /* ── Impresión ── */
-      @page { size: A4; margin: 0; }
+      @page { size: A4; margin: 14mm 16mm; }
       @media print {
         body { background: #fff; }
-        /* min-height: auto evita la 2ª hoja en blanco por redondeo de altura */
-        .page { margin: 0; box-shadow: none; width: 210mm; min-height: auto; }
+        .page {
+          max-width: none;
+          width: auto;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
       }
     </style>
   </head>
   <body>
     <div class="page">
-      <!-- ═══════════ BARRA LATERAL ═══════════ -->
-      <aside class="sidebar">
-        <div class="photo-wrap">
-          <!-- Foto en /public/cv/foto.jpeg (ruta relativa: funciona con doble clic y en el servidor) -->
-          <img
-            class="photo"
-            src="foto.jpeg"
-            alt="Carlos Iván Perdomo"
-            onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"
-          />
-          <div class="photo-fallback" id="photoFallback">CP</div>
-        </div>
-        <div class="name">Carlos Iván<br />Perdomo Perdomo</div>
-        <div class="role">Desarrollador de Software</div>
-
-        <div class="sidebar-section">
-          <h2>Contacto</h2>
-          <div class="contact-item"><span class="ico">📍</span><span>Bogotá, Colombia</span></div>
-          <div class="contact-item"><span class="ico">📱</span><span>+57 312 409 34 33</span></div>
-          <div class="contact-item"><span class="ico">✉️</span><a href="mailto:perdomocarlos081@gmail.com">perdomocarlos081@gmail.com</a></div>
-          <div class="contact-item"><span class="ico">🌐</span><a href="https://portafolio-carlos-perdomo.netlify.app">portafolio-carlos-perdomo.netlify.app</a></div>
-          <div class="contact-item"><span class="ico">💻</span><a href="https://github.com/cperdomope">github.com/cperdomope</a></div>
-        </div>
-
-        <div class="sidebar-section">
-          <h2>Habilidades</h2>
-          <div class="skill-group">
-            <div class="label">Frontend</div>
-            <div class="chips">
-              <span class="chip">React</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">HTML5</span>
-              <span class="chip">CSS3</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="label">Backend</div>
-            <div class="chips">
-              <span class="chip">Node.js</span>
-              <span class="chip">Express</span>
-              <span class="chip">Python</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="label">Bases de datos</div>
-            <div class="chips"><span class="chip">MySQL</span></div>
-          </div>
-          <div class="skill-group">
-            <div class="label">Escritorio</div>
-            <div class="chips"><span class="chip">PyQt5</span></div>
-          </div>
-          <div class="skill-group">
-            <div class="label">Herramientas</div>
-            <div class="chips">
-              <span class="chip">Git</span>
-              <span class="chip">GitHub</span>
-            </div>
+      <!-- ═══════════ ENCABEZADO ═══════════ -->
+      <header class="header">
+        <div class="header-info">
+          <div class="name">Carlos Iván Perdomo Perdomo</div>
+          <div class="role">Desarrollador de Software · Full-Stack &amp; Desktop</div>
+          <div class="contact">
+            <span>Bogotá, Colombia</span>
+            <span class="sep">|</span>
+            <span>+57 312 409 34 33</span>
+            <span class="sep">|</span>
+            <a href="mailto:perdomocarlos081@gmail.com">perdomocarlos081@gmail.com</a>
+            <span class="sep">|</span>
+            <a href="https://www.linkedin.com/in/carlos-perdomo-0911752a4">LinkedIn</a>
+            <span class="sep">|</span>
+            <a href="https://portafolio-carlos-perdomo.netlify.app">Portafolio</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/cperdomope">GitHub</a>
           </div>
         </div>
+      </header>
 
-        <div class="sidebar-section">
-          <h2>Educación</h2>
-          <div class="edu-item">
-            <div class="t">Tecnólogo en Análisis y Desarrollo de Software</div>
-            <div class="s">SENA · 2024 – 2027 (en curso)</div>
-          </div>
-          <div class="edu-item">
-            <div class="t">Tecnología en Desarrollo de Software</div>
-            <div class="s">UNINPAHU · Jul 2022 – Jun 2023 · Bogotá D.C.</div>
-            <div class="edu-sub">2 semestres aprobados (ciclos propedéuticos hacia Ingeniería de Software)</div>
-            <div class="edu-sub">Fundamentos de programación y análisis lógico</div>
-          </div>
-          <div class="edu-item">
-            <div class="t">Técnico Laboral</div>
-            <div class="s">INCAP · 2014 – 2016 · Bogotá D.C.</div>
-            <div class="edu-sub">Operación de Programas Informáticos y Bases de Datos</div>
-            <div class="edu-sub">Operación de Sistemas Informáticos</div>
-            <div class="edu-sub">Instalación de Redes y Mantenimiento de Computadores</div>
-          </div>
-        </div>
+      <!-- ═══════════ PERFIL ═══════════ -->
+      <section>
+        <h2>Perfil Profesional</h2>
+        <p class="profile">
+          Tecnólogo en Análisis y Desarrollo de Software con enfoque Full-Stack y
+          Desktop. Experiencia construyendo aplicaciones web interactivas
+          utilizando React, Node.js y MySQL, así como soluciones de escritorio
+          eficientes con Python y PyQt5. Más de 7 años de trayectoria laboral
+          previa que respaldan competencias clave como la resolución de problemas,
+          atención al detalle, análisis de datos y orientación al cliente.
+          Apasionado por transformar ideas en soluciones funcionales mediante
+          código limpio, escalable y bien estructurado.
+        </p>
+      </section>
 
-        <div class="sidebar-section">
-          <h2>Idiomas</h2>
-          <div class="lang-row"><span>Español</span><span class="lvl">Nativo</span></div>
-          <div class="lang-row"><span>Inglés</span><span class="lvl">Básico (A2)</span></div>
-        </div>
-      </aside>
+      <!-- ═══════════ HABILIDADES ═══════════ -->
+      <section>
+        <h2>Habilidades Técnicas</h2>
+        <div class="skill-row"><b>Frontend:</b> JavaScript (ES6+), React, HTML5, CSS3.</div>
+        <div class="skill-row"><b>Backend &amp; Bases de Datos:</b> Node.js, Express, Python, MySQL.</div>
+        <div class="skill-row"><b>Herramientas &amp; Librerías:</b> Git, GitHub, PyQt5.</div>
+      </section>
 
-      <!-- ═══════════ CONTENIDO PRINCIPAL ═══════════ -->
-      <main class="main">
-        <section class="main-section">
-          <h2>Perfil Profesional</h2>
-          <p class="profile">
-            Desarrollador de Software(Tecnólogo en Análisis y
-            Desarrollo de Software) con enfoque full-stack y de escritorio.
-            Construyo aplicaciones web con React, Node.js y MySQL, y soluciones de
-            escritorio con Python y PyQt5. Aporto más de 7 años de trayectoria
-            laboral que respaldan mi responsabilidad, atención al detalle y
-            orientación al cliente. Busco proyectos <strong>freelance</strong>
-            donde transformar ideas en soluciones funcionales con código limpio y
-            bien estructurado.
+      <!-- ═══════════ PROYECTOS ═══════════ -->
+      <section>
+        <h2>Proyectos Destacados</h2>
+
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">SGI Librería el Saber</span>
+            <span class="project-type">Full-Stack</span>
+          </div>
+          <p class="project-desc">
+            Sistema de inventario web que gestiona más de 500 libros, con control
+            de stock, panel administrativo e interfaz responsiva.
           </p>
-        </section>
+          <div class="project-tech">React · Node.js · Express · MySQL</div>
+        </div>
 
-        <section class="main-section">
-          <h2>Experiencia</h2>
-
-          <div class="job">
-            <div class="job-head">
-              <span class="job-title">Operador de Medios Tecnológicos</span>
-              <span class="job-date">Nov 2024 – Actualidad</span>
-            </div>
-            <div class="job-company">Fénix de Colombia</div>
-            <div class="job-desc">
-              Monitoreo y operación de plataformas tecnológicas de seguridad,
-              gestión de incidentes en tiempo real y manejo de software
-              especializado con alta precisión.
-            </div>
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">Sistema de Gestión de Parqueaderos</span>
+            <span class="project-type">Desktop</span>
           </div>
-
-          <div class="job">
-            <div class="job-head">
-              <span class="job-title">Asistente de Innovación y Tecnología</span>
-              <span class="job-date">Ene – Feb 2024</span>
-            </div>
-            <div class="job-company">ISARCO Inmobiliaria</div>
-            <div class="job-desc">
-              Apoyo en la adopción de herramientas digitales y soporte tecnológico
-              a los procesos internos de la empresa.
-            </div>
-          </div>
-
-          <div class="job">
-            <div class="job-head">
-              <span class="job-title">Analista de Cajas</span>
-              <span class="job-date">2015 – 2023</span>
-            </div>
-            <div class="job-company">Centro Comercial Unicentro Bogotá</div>
-            <div class="job-desc">
-              Control, conciliación y análisis de información de cajas durante 7
-              años, garantizando exactitud en el manejo de datos y atención
-              oportuna a requerimientos.
-            </div>
-          </div>
-        </section>
-
-        <section class="main-section">
-          <h2>Proyectos</h2>
-
-          <div class="project">
-            <div class="project-title">SGI Librería el Saber</div>
-            <div class="project-desc">
-              Sistema de inventario web full-stack que gestiona <strong>más de
-              500 libros</strong>, con control de stock, ventas, panel
-              administrativo e interfaz responsiva. Proyecto formativo del SENA.
-            </div>
-            <div class="chips">
-              <span class="chip">React</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">Express</span>
-              <span class="chip">MySQL</span>
-            </div>
-          </div>
-
-          <div class="project">
-            <div class="project-title">Sistema de Gestión de Parqueaderos</div>
-            <div class="project-desc">
-              Aplicación de escritorio que administra los cupos para
-              <strong>cerca de 500 vehículos</strong>, gestionando la rotación
-              según el estado del vehículo (pico y placa, híbrido, eléctrico) y
-              el cargo del funcionario.
-            </div>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">PyQt5</span>
-              <span class="chip">MySQL</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="main-section">
-          <h2>Formación Complementaria</h2>
-          <p class="course-note">
-            Selección <strong>de cursos</strong> realizados en SENA,
-            MinTIC y Platzi (2024 – actualidad):
+          <p class="project-desc">
+            Aplicación de escritorio para administrar la rotación de cerca de 500
+            vehículos basándose en reglas lógicas (pico y placa, tipo de vehículo y
+            cargo del funcionario).
           </p>
-          <div class="course-grid">
-            <div class="course">
-              <div class="ct">Seguridad Digital</div>
-              <div class="cm">MinTIC · 48 h · Jun 2026</div>
-            </div>
-            <div class="course">
-              <div class="ct">Power BI</div>
-              <div class="cm">MinTIC · 48 h · Jun 2026</div>
-            </div>
-            <div class="course">
-              <div class="ct">Seguridad y Privacidad de la Información</div>
-              <div class="cm">MinTIC · 48 h · Jun 2026</div>
-            </div>
-            <div class="course">
-              <div class="ct">Desarrollo Regional en TIC y Sector TIC</div>
-              <div class="cm">MinTIC · 48 h · Jun 2026</div>
-            </div>
-            <div class="course">
-              <div class="ct">Habilidades y Herramientas de IA Aplicada al Sector Público II</div>
-              <div class="cm">MinTIC · 48 h</div>
-            </div>
-            <div class="course">
-              <div class="ct">Prompt Engineering</div>
-              <div class="cm">Platzi · 13 h · Ene 2026</div>
-            </div>
-            <div class="course">
-              <div class="ct">Manejo de Pruebas de Software</div>
-              <div class="cm">SENA · Ago 2025</div>
-            </div>
-            <div class="course">
-              <div class="ct">Desarrollo Móvil con App Inventor</div>
-              <div class="cm">SENA · 40 h · Jul 2025</div>
-            </div>
-            <div class="course">
-              <div class="ct">Análisis Financiero</div>
-              <div class="cm">SENA · 40 h · Nov 2024</div>
-            </div>
+          <div class="project-tech">Python · PyQt5 · MySQL</div>
+        </div>
+      </section>
+
+      <!-- ═══════════ EXPERIENCIA ═══════════ -->
+      <section>
+        <h2>Experiencia Laboral</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-role">Operador de Medios Tecnológicos
+              <span class="job-company">— Fénix de Colombia</span></span>
+            <span class="job-date">Nov 2024 – Actualidad</span>
           </div>
-        </section>
-      </main>
+          <ul>
+            <li>Monitoreo y operación de plataformas tecnológicas de seguridad críticas, gestionando incidentes en tiempo real.</li>
+            <li>Manejo de software especializado con alta precisión y generación de reportes técnicos bajo presión.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-role">Asistente de Innovación y Tecnología
+              <span class="job-company">— ISARCO Inmobiliaria</span></span>
+            <span class="job-date">Ene 2024 – Feb 2024</span>
+          </div>
+          <ul>
+            <li>Soporte técnico y alfabetización digital para optimizar los procesos internos de la empresa.</li>
+            <li>Colaboración en la adopción e implementación de herramientas digitales corporativas.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <span class="job-role">Analista de Cajas
+              <span class="job-company">— Centro Comercial Unicentro Bogotá</span></span>
+            <span class="job-date">2015 – 2023</span>
+          </div>
+          <ul>
+            <li>Control, conciliación y análisis de grandes volúmenes de información financiera durante 7 años, asegurando un 100% de exactitud en los datos.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ═══════════ EDUCACIÓN ═══════════ -->
+      <section>
+        <h2>Educación</h2>
+        <div class="edu-item">
+          <div class="edu-title">Tecnólogo en Análisis y Desarrollo de Software</div>
+          <div class="edu-meta">SENA · 2024 – 2027 (en curso)</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">Tecnología en Desarrollo de Software</div>
+          <div class="edu-meta">UNINPAHU · 2022 – 2023 · 2 semestres aprobados (ciclo de Ingeniería) · Bogotá D.C.</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">Técnico Laboral en Operación de Programas Informáticos y Bases de Datos</div>
+          <div class="edu-meta">INCAP · 2014 – 2016 · Bogotá D.C.</div>
+        </div>
+      </section>
+
+      <!-- ═══════════ FORMACIÓN COMPLEMENTARIA ═══════════ -->
+      <section>
+        <h2>Formación Complementaria</h2>
+        <div class="course-grid">
+          <div class="course"><span class="ct">Power BI</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Seguridad Digital</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Seguridad y Privacidad de la Información</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Desarrollo Regional en TIC y Sector TIC</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Habilidades y Herramientas de IA Aplicada al Sector Público II</span> <span class="cm">· MinTIC · 48 h · 2026</span></div>
+          <div class="course"><span class="ct">Prompt Engineering</span> <span class="cm">· Platzi · 13 h · Ene 2026</span></div>
+          <div class="course"><span class="ct">Manejo de Pruebas de Software</span> <span class="cm">· SENA · Ago 2025</span></div>
+          <div class="course"><span class="ct">Desarrollo Móvil con App Inventor</span> <span class="cm">· SENA · 40 h · Jul 2025</span></div>
+          <div class="course"><span class="ct">Análisis Financiero</span> <span class="cm">· SENA · 40 h · Nov 2024</span></div>
+        </div>
+      </section>
+
+      <!-- ═══════════ IDIOMAS ═══════════ -->
+      <section>
+        <h2>Idiomas</h2>
+        <p class="langs"><b>Español:</b> Nativo &nbsp;&nbsp;·&nbsp;&nbsp; <b>Inglés:</b> Básico (A2)</p>
+      </section>
     </div>
   </body>
 </html>
