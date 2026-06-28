@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { GraduationCap, Code2, Lightbulb } from 'lucide-react'
+import { Terminal, Code2, Lightbulb } from 'lucide-react'
 import SectionTitle from '../ui/SectionTitle'
 import { fadeInUp, staggerContainer, viewportOnce } from '../../utils/motion'
 
@@ -12,7 +12,7 @@ function About() {
   const lang = i18n.language === 'en' ? 'en' : 'es'
 
   const highlights = [
-    { icon: GraduationCap, key: 'edu', es: 'Formación SENA', en: 'SENA Education' },
+    { icon: Terminal, key: 'edu', es: 'Formación SENA', en: 'SENA Education' },
     { icon: Code2, key: 'dev', es: 'Full-stack & Escritorio', en: 'Full-stack & Desktop' },
     { icon: Lightbulb, key: 'solve', es: 'Resolución de problemas', en: 'Problem solving' },
   ]
