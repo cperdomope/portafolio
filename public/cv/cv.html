@@ -92,7 +92,7 @@
         text-align: center;
       }
 
-      .sidebar-section { margin-top: 12px; }
+      .sidebar-section { margin-top: 10px; }
 
       .sidebar h2 {
         font-size: 11px;
@@ -100,8 +100,8 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: #0f172a;
-        padding-bottom: 5px;
-        margin-bottom: 9px;
+        padding-bottom: 4px;
+        margin-bottom: 6px;
         border-bottom: 2px solid var(--accent);
       }
 
@@ -116,14 +116,14 @@
       .contact-item .ico { color: var(--accent); flex-shrink: 0; width: 14px; }
       .contact-item a { color: var(--ink); text-decoration: none; }
 
-      .skill-group { margin-bottom: 5px; }
+      .skill-group { margin-bottom: 4px; }
       .skill-group .label {
         font-size: 10px;
         font-weight: 700;
         color: var(--muted);
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
       }
       .chips { display: flex; flex-wrap: wrap; gap: 5px; }
       .chip {
@@ -215,7 +215,8 @@
       @page { size: A4; margin: 0; }
       @media print {
         body { background: #fff; }
-        .page { margin: 0; box-shadow: none; width: 210mm; }
+        /* min-height: auto evita la 2ª hoja en blanco por redondeo de altura */
+        .page { margin: 0; box-shadow: none; width: 210mm; min-height: auto; }
       }
     </style>
   </head>
@@ -295,7 +296,7 @@
           </div>
           <div class="edu-item">
             <div class="t">Técnico Laboral</div>
-            <div class="s">INCAP</div>
+            <div class="s">INCAP · 2014 – 2016 · Bogotá D.C.</div>
             <div class="edu-sub">Operación de Programas Informáticos y Bases de Datos</div>
             <div class="edu-sub">Operación de Sistemas Informáticos</div>
             <div class="edu-sub">Instalación de Redes y Mantenimiento de Computadores</div>
