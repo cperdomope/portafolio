@@ -29,8 +29,8 @@ export const projects = [
       },
     },
     tags: ['React', 'Node.js', 'Express', 'MySQL'],
-    repo: 'https://github.com/cperdomope', // TODO: enlace al repo específico
-    demo: '', // si hay demo en vivo, ponla aquí
+    repo: 'https://github.com/cperdomope/SGI-Libreria-el-Saber',
+    demo: 'https://sgi-libreria-frontend.vercel.app/',
     featured: true,
   },
   {
@@ -56,8 +56,8 @@ export const projects = [
       },
     },
     tags: ['Python', 'PyQt5', 'MySQL'],
-    repo: 'https://github.com/cperdomope', // TODO: enlace al repo específico
-    demo: '',
+    repo: 'https://github.com/cperdomope/Proyecto-Parqueadero-Slud',
+    demo: '', // app de escritorio: sin demo web
     featured: true,
   },
 ]
