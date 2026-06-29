@@ -25,7 +25,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden bg-grid-pattern bg-[size:40px_40px]"
+      className="relative flex min-h-screen items-center overflow-hidden bg-grid-pattern bg-[size:40px_40px] pt-24"
     >
       {/* Halo de luz azul de fondo */}
       <div className="pointer-events-none absolute -top-20 left-1/2 h-[420px] w-[680px] -translate-x-1/2 rounded-full bg-accent/20 blur-[130px]" />
@@ -86,7 +86,7 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-content-muted hover:text-accent"
+        className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-content-muted hover:text-accent"
       >
         <motion.span
           animate={reduce ? {} : { y: [0, 8, 0] }}

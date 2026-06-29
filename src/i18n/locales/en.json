@@ -7,14 +7,16 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "role": "Software Developer",
-    "tagline": "I build web and desktop applications that solve real problems, with clean code and thoughtful experiences.",
+    "role": "Software Developer · Python · React · MySQL",
+    "tagline": "I turn business logic into efficient, well-structured software. I build web applications with React and systems with Python and MySQL, focused on solving the real problem — not just writing code.",
     "cta_cv": "Download CV",
     "cta_projects": "View projects"
   },
   "about": {
     "title": "About me",
-    "body": "I'm a Software Developer focused on turning ideas into functional solutions. I specialize in full-stack and desktop development, with a hands-on approach to solving problems through code."
+    "body1": "I'm Carlos Iván Perdomo, a Software Analysis and Development technologist in the final stage of my training. I design and build web applications and management systems with a practical mindset: understanding the business problem before writing the first line of code.",
+    "body2": "My edge is the professional maturity and discipline I bring from years of prior work experience. I don't just write code that works: I structure maintainable solutions, optimize system logic and communicate clearly, bringing judgment and stability to any development team.",
+    "body3": "I keep learning continuously: I read technical documentation in English, follow current technologies like React and Vite, and strengthen my foundations in Python, JavaScript and databases. Staying current isn't optional; it's part of the craft."
   },
   "skills": {
     "title": "Skills"
@@ -22,6 +24,9 @@
   "projects": {
     "title": "Projects",
     "subtitle": "A selection of my recent work",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "result": "Result",
     "view_repo": "Repository",
     "view_demo": "Live demo"
   },

@@ -31,9 +31,21 @@ function About() {
         >
           <motion.p
             variants={fadeInUp}
-            className="text-lg leading-relaxed text-content-secondary"
+            className="text-left leading-relaxed text-content-secondary"
           >
-            {t('about.body')}
+            {t('about.body1')}
+          </motion.p>
+          <motion.p
+            variants={fadeInUp}
+            className="mt-4 text-left leading-relaxed text-content-secondary"
+          >
+            {t('about.body2')}
+          </motion.p>
+          <motion.p
+            variants={fadeInUp}
+            className="mt-4 text-left leading-relaxed text-content-secondary"
+          >
+            {t('about.body3')}
           </motion.p>
 
           <motion.div

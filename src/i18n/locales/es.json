@@ -7,14 +7,16 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "role": "Desarrollador de Software",
-    "tagline": "Construyo aplicaciones web y de escritorio que resuelven problemas reales, con código limpio y experiencias bien pensadas.",
+    "role": "Desarrollador de Software · Python · React · MySQL",
+    "tagline": "Transformo la lógica de negocio en software eficiente y estructurado. Desarrollo aplicaciones web con React y sistemas con Python y MySQL, enfocado en resolver el problema real, no solo en escribir código.",
     "cta_cv": "Descargar CV",
     "cta_projects": "Ver proyectos"
   },
   "about": {
     "title": "Sobre mí",
-    "body": "Soy Desarrollador de Software enfocado en transformar ideas en soluciones funcionales. Me especializo en el desarrollo full-stack y de escritorio, con un enfoque práctico en resolver problemas a través del código."
+    "body1": "Soy Carlos Iván Perdomo, Tecnólogo en Análisis y Desarrollo de Software en etapa final de formación. Diseño y construyo aplicaciones web y sistemas de gestión con un enfoque práctico: entender el problema del negocio antes de escribir la primera línea de código.",
+    "body2": "Mi diferencial es la madurez profesional y la disciplina que traigo de años de experiencia laboral previa. No solo escribo código que funciona: estructuro soluciones mantenibles, optimizo la lógica de los sistemas y me comunico con claridad, aportando criterio y estabilidad a cualquier equipo de desarrollo.",
+    "body3": "Mantengo un aprendizaje continuo: me documento técnicamente en inglés, sigo tecnologías actuales como React y Vite, y refuerzo mis bases en Python, JavaScript y bases de datos. Mantenerme vigente no es opcional; es parte del oficio."
   },
   "skills": {
     "title": "Habilidades"
@@ -22,6 +24,9 @@
   "projects": {
     "title": "Proyectos",
     "subtitle": "Una selección de mi trabajo reciente",
+    "challenge": "Reto",
+    "solution": "Solución",
+    "result": "Resultado",
     "view_repo": "Repositorio",
     "view_demo": "Demo en vivo"
   },

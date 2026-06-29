@@ -13,7 +13,15 @@ import { fadeInUp } from '../../utils/motion'
 function ProjectCard({ project }) {
   const { t, i18n } = useTranslation()
   const lang = i18n.language === 'en' ? 'en' : 'es'
+  const desc = project.description[lang]
   const [imgError, setImgError] = useState(false)
+
+  // Estructura Reto / Solución / Resultado de cada proyecto
+  const blocks = [
+    { label: t('projects.challenge'), text: desc.challenge },
+    { label: t('projects.solution'), text: desc.solution },
+    { label: t('projects.result'), text: desc.result },
+  ]
 
   return (
     <motion.article
@@ -47,9 +55,14 @@ function ProjectCard({ project }) {
       {/* Contenido */}
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-xl">{project.title}</h3>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-content-secondary">
-          {project.description[lang]}
-        </p>
+        <div className="mt-3 flex-1 space-y-2 text-sm leading-relaxed">
+          {blocks.map(({ label, text }) => (
+            <p key={label}>
+              <span className="font-semibold text-accent-light">{label}: </span>
+              <span className="text-content-secondary">{text}</span>
+            </p>
+          ))}
+        </div>
 
         {/* Etiquetas de tecnología */}
         <ul className="mt-5 flex flex-wrap gap-2">
