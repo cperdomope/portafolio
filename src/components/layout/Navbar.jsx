@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import LanguageToggle from '../ui/LanguageToggle'
+import Logo from '../ui/Logo'
 import { useActiveSection } from '../../hooks/useActiveSection'
 
 const SECTION_IDS = ['about', 'skills', 'projects', 'contact']
@@ -37,12 +38,8 @@ function Navbar() {
       }`}
     >
       <nav className="container-section flex h-16 items-center justify-between">
-        {/* Logo / iniciales */}
-        <a href="#hero" className="font-mono text-lg font-bold text-content-primary">
-          {'<'}
-          <span className="text-accent">CP</span>
-          {' />'}
-        </a>
+        {/* Marca personal */}
+        <Logo roleLabel={t('nav.brand_role')} />
 
         {/* Links escritorio */}
         <ul className="hidden items-center gap-8 md:flex">

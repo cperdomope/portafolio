@@ -3,7 +3,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "brand_role": "Software Developer"
   },
   "hero": {
     "greeting": "Hi, I'm",
