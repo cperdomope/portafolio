@@ -8,16 +8,16 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "role": "Desarrollador de Software · Python · React · MySQL",
-    "tagline": "Transformo la lógica de negocio en software eficiente y estructurado. Desarrollo aplicaciones web con React y sistemas con Python y MySQL, enfocado en resolver el problema real, no solo en escribir código.",
+    "role": "Desarrollador Full-Stack · React · Node.js · MySQL · Python",
+    "tagline": "Construyo aplicaciones web y de escritorio de punta a punta: APIs en Node.js protegidas con JWT y roles, operaciones sobre MySQL dentro de transacciones y pruebas automatizadas que respaldan lo que entrego.",
     "cta_cv": "Descargar CV",
     "cta_projects": "Ver proyectos"
   },
   "about": {
     "title": "Sobre mí",
-    "body1": "Soy Carlos Iván Perdomo, Tecnólogo en Análisis y Desarrollo de Software en etapa final de formación. Diseño y construyo aplicaciones web y sistemas de gestión con un enfoque práctico: entender el problema del negocio antes de escribir la primera línea de código.",
-    "body2": "Mi diferencial es la madurez profesional y la disciplina que traigo de años de experiencia laboral previa. No solo escribo código que funciona: estructuro soluciones mantenibles, optimizo la lógica de los sistemas y me comunico con claridad, aportando criterio y estabilidad a cualquier equipo de desarrollo.",
-    "body3": "Mantengo un aprendizaje continuo: me documento técnicamente en inglés, sigo tecnologías actuales como React y Vite, y refuerzo mis bases en Python, JavaScript y bases de datos. Mantenerme vigente no es opcional; es parte del oficio."
+    "body1": "Soy Carlos Iván Perdomo, Tecnólogo en Análisis y Desarrollo de Software en etapa final de formación. Diseño y construyo aplicaciones web con React, Node.js y MySQL, y sistemas de escritorio con Python y PyQt5, entendiendo primero el problema del negocio y después escribiendo el código.",
+    "body2": "Antes de dedicarme al desarrollo pasé 7 años conciliando y auditando información financiera diaria, donde una diferencia no se podía dejar para el día siguiente. De ahí vienen el rigor con los datos y la costumbre de verificar antes de dar algo por terminado: hoy eso se traduce en transacciones con rollback para que el stock nunca quede descuadrado y en 63 pruebas automatizadas sobre mi API.",
+    "body3": "Mantengo un aprendizaje continuo: leo documentación técnica en inglés, trabajo con herramientas actuales como React 19, Vite y Jest, y refuerzo mis bases en Python, JavaScript y bases de datos. Mantenerme vigente no es opcional; es parte del oficio."
   },
   "skills": {
     "title": "Habilidades"

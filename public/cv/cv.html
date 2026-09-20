@@ -57,10 +57,10 @@
         letter-spacing: -0.3px;
       }
       .role {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 600;
         color: var(--ink);
-        margin-top: 2px;
+        margin-top: 3px;
       }
       .contact {
         display: flex;
@@ -98,7 +98,7 @@
       }
 
       /* ── Secciones ── */
-      section { margin-bottom: 15px; }
+      section { margin-bottom: 14px; }
       h2 {
         font-size: 12.5px;
         font-weight: 700;
@@ -115,11 +115,11 @@
       .profile { text-align: justify; color: var(--ink); }
 
       /* Habilidades */
-      .skill-row { font-size: 11px; margin-bottom: 5px; }
+      .skill-row { font-size: 10.7px; margin-bottom: 4px; }
       .skill-row b { color: var(--accent); }
 
       /* Proyectos */
-      .project { margin-bottom: 10px; break-inside: avoid; }
+      .project { margin-bottom: 11px; break-inside: avoid; }
       .project-head {
         display: flex;
         align-items: baseline;
@@ -137,11 +137,13 @@
         text-transform: uppercase;
         letter-spacing: 0.4px;
       }
-      .project-desc { font-size: 11px; color: var(--ink); margin: 2px 0 2px; }
-      .project-tech { font-size: 10px; color: var(--muted); font-weight: 500; }
+      .project-tech { font-size: 10px; color: var(--muted); font-weight: 500; margin-top: 1px; }
+      .project ul { margin: 4px 0 0; padding-left: 15px; }
+      .project li { font-size: 10.6px; color: var(--ink); margin-bottom: 2.5px; }
+      .project li b { color: var(--accent); font-weight: 600; }
 
       /* Experiencia */
-      .job { margin-bottom: 11px; break-inside: avoid; }
+      .job { margin-bottom: 10px; break-inside: avoid; }
       .job-head {
         display: flex;
         justify-content: space-between;
@@ -151,21 +153,21 @@
       .job-role { font-size: 11.5px; font-weight: 700; color: var(--ink); }
       .job-company { font-weight: 500; color: var(--accent); }
       .job-date { font-size: 10px; color: var(--muted); white-space: nowrap; }
-      .job ul { margin: 4px 0 0; padding-left: 16px; }
-      .job li { font-size: 10.8px; color: var(--ink); margin-bottom: 2px; }
+      .job ul { margin: 4px 0 0; padding-left: 15px; }
+      .job li { font-size: 10.6px; color: var(--ink); margin-bottom: 2.5px; }
 
       /* Educación */
-      .edu-item { margin-bottom: 7px; break-inside: avoid; }
-      .edu-title { font-size: 11.3px; font-weight: 700; color: var(--ink); }
-      .edu-meta { font-size: 10.5px; color: var(--muted); }
+      .edu-item { margin-bottom: 6px; break-inside: avoid; }
+      .edu-title { font-size: 11.2px; font-weight: 700; color: var(--ink); }
+      .edu-meta { font-size: 10.4px; color: var(--muted); }
 
       /* Formación complementaria (2 columnas) */
       .course-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 6px 22px;
+        gap: 5px 22px;
       }
-      .course { font-size: 10.5px; padding-left: 11px; position: relative; }
+      .course { font-size: 10.4px; padding-left: 11px; position: relative; }
       .course::before {
         content: '';
         position: absolute;
@@ -201,7 +203,9 @@
       <header class="header">
         <div class="header-info">
           <div class="name">Carlos Iván Perdomo Perdomo</div>
-          <div class="role">Desarrollador de Software · Full-Stack &amp; Desktop</div>
+          <div class="role">
+            Desarrollador de Software · Full-Stack (React · Node.js · MySQL) y Escritorio (Python · PyQt5)
+          </div>
           <div class="contact">
             <span>Bogotá, Colombia</span>
             <span class="sep">|</span>
@@ -222,23 +226,27 @@
       <section>
         <h2>Perfil Profesional</h2>
         <p class="profile">
-          Tecnólogo en Análisis y Desarrollo de Software con enfoque Full-Stack y
-          Desktop. Experiencia construyendo aplicaciones web interactivas
-          utilizando React, Node.js y MySQL, así como soluciones de escritorio
-          eficientes con Python y PyQt5. Más de 7 años de trayectoria laboral
-          previa que respaldan competencias clave como la resolución de problemas,
-          atención al detalle, análisis de datos y orientación al cliente.
-          Apasionado por transformar ideas en soluciones funcionales mediante
-          código limpio, escalable y bien estructurado.
+          Tecnólogo en Análisis y Desarrollo de Software (SENA, etapa final) que construye
+          aplicaciones de punta a punta: web con React, Node.js/Express y MySQL, y escritorio
+          con Python y PyQt5. Mi proyecto principal es un sistema de inventario desplegado en
+          la nube, con API REST protegida por JWT y roles, operaciones de stock dentro de
+          transacciones SQL y 63 pruebas automatizadas con Jest y Supertest. Antes de dedicarme
+          al desarrollo pasé 7 años conciliando y auditando información financiera diaria,
+          donde una diferencia no se podía dejar para el día siguiente: de ahí vienen el rigor
+          con los datos y la costumbre de verificar antes de dar algo por terminado.
         </p>
       </section>
 
       <!-- ═══════════ HABILIDADES ═══════════ -->
       <section>
         <h2>Habilidades Técnicas</h2>
-        <div class="skill-row"><b>Frontend:</b> JavaScript (ES6+), React, HTML5, CSS3.</div>
-        <div class="skill-row"><b>Backend &amp; Bases de Datos:</b> Node.js, Express, Python, MySQL.</div>
-        <div class="skill-row"><b>Herramientas &amp; Librerías:</b> Git, GitHub, PyQt5.</div>
+        <div class="skill-row"><b>Frontend:</b> JavaScript (ES6+), React 19, React Router 7, React Hook Form, Recharts, Vite 7, Bootstrap 5, Tailwind CSS, HTML5, CSS3.</div>
+        <div class="skill-row"><b>Backend &amp; APIs:</b> Node.js 20, Express 5, API REST, arquitectura de middlewares, Axios con interceptores, Python.</div>
+        <div class="skill-row"><b>Bases de Datos:</b> MySQL — consultas preparadas, transacciones con rollback, columnas generadas, índices y paginación en servidor.</div>
+        <div class="skill-row"><b>Seguridad:</b> JWT, bcrypt, Helmet, express-rate-limit, control de acceso por roles (RBAC), validación de entrada.</div>
+        <div class="skill-row"><b>Pruebas &amp; Calidad:</b> Jest, Supertest, ESLint, manejo centralizado de errores.</div>
+        <div class="skill-row"><b>Escritorio &amp; Reportes:</b> PyQt5, PyMySQL, PyInstaller, openpyxl, ReportLab, matplotlib, jsPDF, SheetJS (xlsx).</div>
+        <div class="skill-row"><b>Herramientas &amp; Despliegue:</b> Git, GitHub, Railway, Vercel, Netlify, Cloudinary (Multer), variables de entorno.</div>
       </section>
 
       <!-- ═══════════ PROYECTOS ═══════════ -->
@@ -247,14 +255,17 @@
 
         <div class="project">
           <div class="project-head">
-            <span class="project-title">SGI Librería el Saber</span>
+            <span class="project-title">SGI Librería el Saber — Sistema de Gestión de Inventario</span>
             <span class="project-type">Full-Stack</span>
           </div>
-          <p class="project-desc">
-            Sistema de inventario web que gestiona más de 500 libros, con control
-            de stock, panel administrativo e interfaz responsiva.
-          </p>
-          <div class="project-tech">React · Node.js · Express · MySQL</div>
+          <div class="project-tech">React 19 · Vite 7 · Node.js 20 · Express 5 · MySQL · Jest · Railway + Vercel</div>
+          <ul>
+            <li><b>API REST modular</b> de 10 recursos (libros, ventas, kardex, clientes, proveedores, usuarios y catálogos) con autenticación JWT, control de acceso por roles, contraseñas cifradas con bcrypt, cabeceras de seguridad con Helmet, límite de peticiones por IP y consultas preparadas contra inyección SQL.</li>
+            <li><b>Integridad de los datos:</b> las ventas y los movimientos de kardex se escriben dentro de transacciones MySQL con rollback, de modo que el stock nunca queda descuadrado si un paso falla a mitad de camino.</li>
+            <li><b>63 pruebas automatizadas</b> con Jest y Supertest, repartidas en 10 suites que cubren inicio de sesión, ventas, kardex, permisos por rol, catálogos y carga de imágenes.</li>
+            <li><b>Frontend SPA</b> con React Router 7, rutas protegidas por rol, paginación reutilizable y tablero de indicadores con Recharts; cliente Axios centralizado cuyos interceptores inyectan el token y cierran la sesión de forma global ante un 401.</li>
+            <li><b>Rendimiento:</b> división del paquete con Vite para que las librerías pesadas de exportación (xlsx, jsPDF) solo se descarguen al generar reportes, compresión gzip de las respuestas y límite de tamaño del payload JSON.</li>
+          </ul>
         </div>
 
         <div class="project">
@@ -262,12 +273,26 @@
             <span class="project-title">Sistema de Gestión de Parqueaderos</span>
             <span class="project-type">Desktop</span>
           </div>
-          <p class="project-desc">
-            Aplicación de escritorio para administrar la rotación de cerca de 500
-            vehículos basándose en reglas lógicas (pico y placa, tipo de vehículo y
-            cargo del funcionario).
-          </p>
-          <div class="project-tech">Python · PyQt5 · MySQL</div>
+          <div class="project-tech">Python · PyQt5 · MySQL · PyInstaller · ReportLab / openpyxl / matplotlib</div>
+          <ul>
+            <li><b>Aplicación de escritorio por capas</b> (modelos, interfaz, acceso a datos, reportes y autenticación) que asigna celdas de parqueo a funcionarios según tipo de vehículo, cargo y restricción de pico y placa.</li>
+            <li><b>Regla de negocio resuelta en la base de datos:</b> columnas generadas (STORED) derivan el último dígito de la placa y su paridad, así la clasificación de pico y placa es idéntica para la aplicación y para todos los reportes.</li>
+            <li><b>Motor de asignación:</b> una celda se comparte entre dos vehículos de paridad de placa opuesta, salvo los cargos con derecho a celda exclusiva; disparadores en MySQL recalculan el estado de cada celda (disponible, parcial o completa) en el mismo momento de la asignación.</li>
+            <li><b>Módulo de reportes</b> con filtros por sótano, tipo de vehículo y estado, exportación a Excel y PDF, y gráficas de ocupación.</li>
+            <li><b>Seguridad y entrega:</b> inicio de sesión con contraseñas cifradas (bcrypt) y tres perfiles de usuario; empaquetado con PyInstaller como ejecutable de Windows para instalarlo sin dependencias.</li>
+            <li><b>Optimización de la interfaz:</b> carga diferida de pestañas, caché en memoria para redibujar sin volver a consultar la base de datos y grilla responsiva de 1 a 8 columnas.</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">Portafolio Web Personal</span>
+            <span class="project-type">Frontend</span>
+          </div>
+          <div class="project-tech">React 19 · Vite · Tailwind CSS · i18next · Framer Motion · Netlify</div>
+          <ul>
+            <li>SPA bilingüe (español/inglés) con i18next, animaciones con Framer Motion, formulario de contacto vía EmailJS y despliegue continuo desde GitHub en Netlify.</li>
+          </ul>
         </div>
       </section>
 
@@ -282,8 +307,8 @@
             <span class="job-date">Nov 2024 – Actualidad</span>
           </div>
           <ul>
-            <li>Monitoreo y operación de plataformas tecnológicas de seguridad críticas, gestionando incidentes en tiempo real.</li>
-            <li>Manejo de software especializado con alta precisión y generación de reportes técnicos bajo presión.</li>
+            <li>Monitoreo en tiempo real de plataformas de seguridad electrónica: detección, clasificación y escalamiento de eventos sin detener la operación.</li>
+            <li>Registro y documentación de incidentes en reportes técnicos verificables, el mismo criterio de trazabilidad que aplico al manejar errores y logs en los sistemas que desarrollo.</li>
           </ul>
         </div>
 
@@ -294,8 +319,7 @@
             <span class="job-date">Ene 2024 – Feb 2024</span>
           </div>
           <ul>
-            <li>Soporte técnico y alfabetización digital para optimizar los procesos internos de la empresa.</li>
-            <li>Colaboración en la adopción e implementación de herramientas digitales corporativas.</li>
+            <li>Soporte técnico y acompañamiento a usuarios internos en la adopción de herramientas digitales, traduciendo necesidades de personas no técnicas en soluciones concretas.</li>
           </ul>
         </div>
 
@@ -303,10 +327,11 @@
           <div class="job-head">
             <span class="job-role">Analista de Cajas
               <span class="job-company">— Centro Comercial Unicentro Bogotá</span></span>
-            <span class="job-date">2015 – 2023</span>
+            <span class="job-date">2015 – 2023 · 7 años</span>
           </div>
           <ul>
-            <li>Control, conciliación y análisis de grandes volúmenes de información financiera durante 7 años, asegurando un 100% de exactitud en los datos.</li>
+            <li>Conciliación y auditoría diaria de altos volúmenes de información financiera, detectando y corrigiendo diferencias antes del cierre.</li>
+            <li>Siete años operando con procedimientos estrictos y datos sensibles: esa disciplina de validar cada cifra es la que hoy traduzco en pruebas automatizadas y en operaciones transaccionales de inventario.</li>
           </ul>
         </div>
       </section>
@@ -340,14 +365,14 @@
       <section>
         <h2>Formación Complementaria</h2>
         <div class="course-grid">
-          <div class="course"><span class="ct">Power BI</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Manejo de Pruebas de Software</span> <span class="cm">· SENA · Ago 2025</span></div>
+          <div class="course"><span class="ct">Desarrollo Móvil con App Inventor</span> <span class="cm">· SENA · 40 h · Jul 2025</span></div>
           <div class="course"><span class="ct">Seguridad Digital</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
           <div class="course"><span class="ct">Seguridad y Privacidad de la Información</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
+          <div class="course"><span class="ct">Power BI</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
           <div class="course"><span class="ct">Desarrollo Regional en TIC y Sector TIC</span> <span class="cm">· MinTIC · 48 h · Jun 2026</span></div>
           <div class="course"><span class="ct">Habilidades y Herramientas de IA Aplicada al Sector Público II</span> <span class="cm">· MinTIC · 48 h · 2026</span></div>
           <div class="course"><span class="ct">Prompt Engineering</span> <span class="cm">· Platzi · 13 h · Ene 2026</span></div>
-          <div class="course"><span class="ct">Manejo de Pruebas de Software</span> <span class="cm">· SENA · Ago 2025</span></div>
-          <div class="course"><span class="ct">Desarrollo Móvil con App Inventor</span> <span class="cm">· SENA · 40 h · Jul 2025</span></div>
           <div class="course"><span class="ct">Análisis Financiero</span> <span class="cm">· SENA · 40 h · Nov 2024</span></div>
         </div>
       </section>
@@ -355,7 +380,7 @@
       <!-- ═══════════ IDIOMAS ═══════════ -->
       <section>
         <h2>Idiomas</h2>
-        <p class="langs"><b>Español:</b> Nativo &nbsp;&nbsp;·&nbsp;&nbsp; <b>Inglés:</b> Básico (A2)</p>
+        <p class="langs"><b>Español:</b> Nativo &nbsp;&nbsp;·&nbsp;&nbsp; <b>Inglés:</b> Básico (A2) — lectura de documentación técnica</p>
       </section>
     </div>
   </body>

@@ -8,16 +8,16 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "role": "Software Developer · Python · React · MySQL",
-    "tagline": "I turn business logic into efficient, well-structured software. I build web applications with React and systems with Python and MySQL, focused on solving the real problem — not just writing code.",
+    "role": "Full-Stack Developer · React · Node.js · MySQL · Python",
+    "tagline": "I build web and desktop applications end to end: Node.js APIs protected with JWT and roles, MySQL operations wrapped in transactions, and automated tests that back up what I ship.",
     "cta_cv": "Download CV",
     "cta_projects": "View projects"
   },
   "about": {
     "title": "About me",
-    "body1": "I'm Carlos Iván Perdomo, a Software Analysis and Development technologist in the final stage of my training. I design and build web applications and management systems with a practical mindset: understanding the business problem before writing the first line of code.",
-    "body2": "My edge is the professional maturity and discipline I bring from years of prior work experience. I don't just write code that works: I structure maintainable solutions, optimize system logic and communicate clearly, bringing judgment and stability to any development team.",
-    "body3": "I keep learning continuously: I read technical documentation in English, follow current technologies like React and Vite, and strengthen my foundations in Python, JavaScript and databases. Staying current isn't optional; it's part of the craft."
+    "body1": "I'm Carlos Iván Perdomo, a Software Analysis and Development technologist in the final stage of my training. I design and build web applications with React, Node.js and MySQL, and desktop systems with Python and PyQt5 — understanding the business problem first, writing the code second.",
+    "body2": "Before moving into development I spent 7 years reconciling and auditing daily financial records, where a discrepancy could not wait until the next day. That's where my rigor with data and my habit of verifying before calling something done come from: today it shows up as transactions with rollback so stock never drifts, and as 63 automated tests covering my API.",
+    "body3": "I keep learning continuously: I read technical documentation in English, work with current tooling like React 19, Vite and Jest, and strengthen my foundations in Python, JavaScript and databases. Staying current isn't optional; it's part of the craft."
   },
   "skills": {
     "title": "Skills"

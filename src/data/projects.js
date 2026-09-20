@@ -2,33 +2,36 @@
 // Cada proyecto tiene textos bilingües (es/en). Las tarjetas se generan
 // dinámicamente a partir de este arreglo en el componente Projects.
 //
+// Los textos describen decisiones técnicas reales del repositorio de cada
+// proyecto, de modo que coincidan con lo que afirma el CV (/public/cv).
+//
 // Para añadir un proyecto nuevo, copia un objeto y rellena los campos.
-// La imagen va en /public/projects/  (por ahora usamos un placeholder).
+// La imagen va en /public/projects/.
 
 export const projects = [
   {
     id: 'libreria-saber',
     title: 'SGI Librería el Saber',
-    image: '/projects/libreria-saber.png', // TODO: reemplazar por mockup real
+    image: '/projects/libreria-saber.png',
     description: {
       es: {
         challenge:
-          'La gestión manual del inventario de una librería era lenta y propensa a errores, sin control real del stock.',
+          'El inventario se llevaba a mano: el stock registrado dejaba de coincidir con el real y una venta mal anotada se perdía sin rastro.',
         solution:
-          'Desarrollé un sistema web full-stack en la nube con React, Node.js y MySQL, con panel administrativo e interfaz responsiva.',
+          'Construí un sistema full-stack con React 19 y una API REST en Express 5 sobre MySQL. Las ventas y los movimientos de kardex se escriben dentro de transacciones con rollback, y el acceso está protegido con JWT, roles, bcrypt, Helmet y límite de peticiones por IP.',
         result:
-          'Centralizó el control de más de 500 libros, agilizando el seguimiento de stock y ventas.',
+          'Cada movimiento de stock quedó trazado y auditable, respaldado por 63 pruebas automatizadas con Jest y Supertest, y desplegado en Railway y Vercel.',
       },
       en: {
         challenge:
-          'A bookstore managed its inventory manually — slow, error-prone and without real stock control.',
+          'Inventory was tracked by hand: recorded stock drifted away from the real count and a mistyped sale left no trace.',
         solution:
-          'I built a full-stack, cloud-hosted web system with React, Node.js and MySQL, with an admin panel and a responsive interface.',
+          'I built a full-stack system with React 19 and an Express 5 REST API on MySQL. Sales and stock movements are written inside transactions with rollback, and access is protected with JWT, roles, bcrypt, Helmet and per-IP rate limiting.',
         result:
-          'Centralized control of 500+ books, streamlining stock and sales tracking.',
+          'Every stock movement became traceable and auditable, backed by 63 automated tests with Jest and Supertest, and deployed on Railway and Vercel.',
       },
     },
-    tags: ['React', 'Node.js', 'Express', 'MySQL'],
+    tags: ['React 19', 'Node.js', 'Express 5', 'MySQL', 'JWT', 'Jest'],
     repo: 'https://github.com/cperdomope/SGI-Libreria-el-Saber',
     demo: 'https://sgi-libreria-frontend.vercel.app/',
     featured: true,
@@ -36,26 +39,26 @@ export const projects = [
   {
     id: 'parqueadero',
     title: 'Sistema de Gestión de Parqueaderos',
-    image: '/projects/parqueadero.png', // TODO: reemplazar por mockup real
+    image: '/projects/parqueadero.png',
     description: {
       es: {
         challenge:
-          'Administrar la rotación de cerca de 500 vehículos bajo reglas complejas era difícil de controlar manualmente.',
+          'Repartir las celdas de dos sótanos entre los funcionarios era inmanejable en una hoja de cálculo: pico y placa, tipo de vehículo y cargo se cruzaban en cada asignación.',
         solution:
-          'Construí una aplicación de escritorio en Python (PyQt5) y MySQL que asigna cupos según el estado del vehículo (pico y placa, híbrido, eléctrico) y el cargo del funcionario.',
+          'Desarrollé una aplicación de escritorio en Python y PyQt5 organizada por capas, con la regla de pico y placa resuelta en la propia base de datos: columnas generadas derivan la paridad de cada placa, así la app y los reportes clasifican igual.',
         result:
-          'Automatizó la rotación y mantuvo la disponibilidad de cupos controlada en tiempo real.',
+          'La rotación quedó automatizada —una celda se comparte entre dos vehículos de paridad opuesta, salvo los cargos con derecho a celda exclusiva— con reportes en Excel y PDF y entrega como ejecutable de Windows.',
       },
       en: {
         challenge:
-          'Managing the rotation of nearly 500 vehicles under complex rules was hard to control manually.',
+          'Splitting the cells of two parking levels among staff was unmanageable in a spreadsheet: plate restrictions, vehicle type and job role crossed on every assignment.',
         solution:
-          'I built a desktop application in Python (PyQt5) and MySQL that assigns spots based on vehicle category (pico y placa, hybrid, electric) and staff role.',
+          'I built a layered desktop application in Python and PyQt5, with the plate-restriction rule solved in the database itself: generated columns derive each plate parity, so the app and the reports classify identically.',
         result:
-          'Automated rotation and kept parking availability under control in real time.',
+          'Rotation became automatic — one cell is shared by two vehicles of opposite plate parity, except for roles entitled to an exclusive cell — with Excel and PDF reports, shipped as a Windows executable.',
       },
     },
-    tags: ['Python', 'PyQt5', 'MySQL'],
+    tags: ['Python', 'PyQt5', 'MySQL', 'PyInstaller', 'ReportLab'],
     repo: 'https://github.com/cperdomope/Proyecto-Parqueadero-Slud',
     demo: '', // app de escritorio: sin demo web
     featured: true,
