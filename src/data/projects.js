@@ -33,7 +33,7 @@ export const projects = [
     },
     tags: ['React 19', 'Node.js', 'Express 5', 'MySQL', 'JWT', 'Jest'],
     repo: 'https://github.com/cperdomope/SGI-Libreria-el-Saber',
-    demo: 'https://sgi-libreria-frontend.vercel.app/',
+    demo: '', // backend fuera de linea: reponer la URL cuando este desplegado de nuevo
     featured: true,
   },
   {
