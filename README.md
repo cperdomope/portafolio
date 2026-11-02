@@ -1,4 +1,4 @@
-# Portafolio — Carlos Iván Perdomo Perdomo
+# Portafolio — Carlos Ivan Perdomo Perdomo
 
 Portafolio web personal de un Desarrollador de Software. Diseño oscuro,
 minimalista y dinámico, bilingüe (Español / Inglés) y totalmente responsive.
@@ -48,4 +48,4 @@ Desplegado en **Netlify**. La configuración está en `netlify.toml`.
 
 ---
 
-© Carlos Iván Perdomo Perdomo
+© Carlos Ivan Perdomo Perdomo

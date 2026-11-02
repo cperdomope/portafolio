@@ -2,7 +2,7 @@
 // Edita aquí tus datos una sola vez y se reflejan en todo el portafolio.
 
 export const personal = {
-  name: 'Carlos Iván Perdomo Perdomo',
+  name: 'Carlos Ivan Perdomo Perdomo',
   shortName: 'Carlos Perdomo',
   email: 'perdomocarlos081@gmail.com',
   cv: '/cv/CV-Carlos-Perdomo.pdf', // coloca tu PDF en /public/cv/
