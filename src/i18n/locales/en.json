@@ -15,7 +15,7 @@
   },
   "about": {
     "title": "About me",
-    "body1": "I'm Carlos Ivan Perdomo, a Software Analysis and Development technologist in the final stage of my training. I design and build web applications with React, Node.js and MySQL, and desktop systems with Python and PyQt5 — understanding the business problem first, writing the code second.",
+    "body1": "I'm Carlos Ivan Perdomo, a Software Analysis and Development technologist. I design and build web applications with React, Node.js and MySQL, and desktop systems with Python and PyQt5 — understanding the business problem first, writing the code second.",
     "body2": "Before moving into development I spent 7 years reconciling and auditing daily financial records, where a discrepancy could not wait until the next day. That's where my rigor with data and my habit of verifying before calling something done come from: today it shows up as transactions with rollback so stock never drifts, and as 63 automated tests covering my API.",
     "body3": "I keep learning continuously: I read technical documentation in English, work with current tooling like React 19, Vite and Jest, and strengthen my foundations in Python, JavaScript and databases. Staying current isn't optional; it's part of the craft."
   },
